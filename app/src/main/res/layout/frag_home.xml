@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:sliderIndicatorSelectedColor="@color/yellow_color"
+        app:sliderIndicatorUnselectedColor="@color/gray_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sliderScrollTimeInSec="1" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/black"
+        android:text="Top Health Solutions"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        >
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All Solutions"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/rounded_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/rec_list"
+        app:layout_constraintRight_toRightOf="parent">
+    </Button>
+
+    <TextView
+        android:id="@+id/txt_expdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Experienced Doctors"
+        android:textSize="15sp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btn_view"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+            <TextView
+                android:id="@+id/expdoc_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="View All"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/btn_view"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_exp_docs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_expdoc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txt_health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Basic Essentials"
+        android:textSize="15sp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/rec_exp_docs"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+
+            <TextView
+                android:id="@+id/supp_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="View All"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/rec_exp_docs"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_health_supp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_health"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txt_rated_hosp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textSize="15sp"
+        android:text="Top Rated Hospitals"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/rec_health_supp"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+            <TextView
+                android:id="@+id/txt_rated_hosp_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="View All"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/rec_health_supp"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_top_rated_hos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rated_hosp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

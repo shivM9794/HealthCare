@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.healthcare.app">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HealthCare">
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".Activity.MainActivity"/>
+        <activity android:name=".Activity.OtpVerification"/>
+        <activity android:name=".DashBoard.DashBoard_Activity"/>
+        <activity android:name=".HealthSolutions.Description_Activity"/>
+        <activity android:name=".HealthSolutions.Health_Sol_Type"/>
+        <activity android:name=".HealthSolutions.Health_Sol_Activity"/>
+        <activity android:name=".HealthSolutions.Description_Tablayout"/>
+        <activity android:name=".Description.Supplement_Description"/>
+        <activity android:name=".Profile.ProfileActivity"/>
+        <activity android:name=".Cart.Add_Cart_Activity"/>
+        <activity android:name=".Notifiction.Notification_activity"/>
+        <activity android:name=".Doctors.DoctorsList_Activity"/>
+        <activity android:name=".Doctors.Doctors_Description"/>
+        <activity android:name=".Cart.Place_Order_Activity"/>
+        <activity android:name=".Hospitals.HospitalList_Activity"/>
+        <activity android:name=".Hospitals.Hospital_Description"/>
+        <activity android:name=".Cart.PlaceOrder_ViaCart"/>
+        <activity android:name=".Cart.OrderList_Activity"/>
+        <activity android:name=".Payment.Payment_activity"/>
+        <activity android:name=".Activity.Logout_Activity"/>
+        <activity android:name=".Cart.SuppList_Activity"/>
+
+        <service
+            android:name=".Services.FirebaseMessageReceiver"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+    </application>
+
+</manifest>

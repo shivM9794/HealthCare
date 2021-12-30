@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/linear_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:weightSum="100"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40">
+
+                    <ImageView
+                        android:id="@+id/img_med"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/medicine">
+                    </ImageView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="50">
+
+
+                    <TextView
+                        android:id="@+id/med_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Crocin 650"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/relief"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Instant relief from fever" />
+
+                   <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="45"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Quantity:" >
+                    </TextView>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/quantity_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="50"
+                            android:layout_gravity="center"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/quantity_dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Amount:65.00"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/red">
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/linear_lyt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/remove"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:gravity="center"
+                    android:background="@drawable/login_bg"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:text="Remove">
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:background="@drawable/login_bg"
+                    android:text="Save For Later">
+                </TextView>
+
+            </LinearLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

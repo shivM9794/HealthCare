@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group  android:checkableBehavior="none"
+        android:id="@+id/group0">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/home1"/>
+    </group>
+
+    <group  android:checkableBehavior="none"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/side_profile"
+            android:title="My Profile"
+            android:icon="@drawable/ic_baseline_person_outline_24"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/health_sol"
+            android:title="Health Solution"
+            android:icon="@drawable/healthsolution"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group14">
+        <item
+            android:id="@+id/order_list"
+            android:title="Order List"
+            android:icon="@drawable/order_list"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group15">
+        <item
+            android:id="@+id/notification"
+            android:title="Notifications"
+            android:icon="@drawable/ic_baseline_notifications_24"/>
+    </group>
+
+    <!--<group android:checkableBehavior="none"
+        android:id="@+id/group3">
+        <item
+            android:id="@+id/nav_cart"
+            android:title="Shopping"
+            android:icon="@drawable/shopping"/>
+    </group>-->
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group4">
+        <item
+            android:id="@+id/nav_add_cart"
+            android:title="Cart"
+            android:icon="@drawable/cart"/>
+    </group>
+
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group5">
+        <item
+            android:id="@+id/doctors"
+            android:title="Doctor's"
+            android:icon="@drawable/doctors"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group6">
+        <item
+            android:id="@+id/hospitals"
+            android:title="Hospitals"
+            android:icon="@drawable/hospitals"/>
+    </group>
+
+
+
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group8">
+        <item
+            android:id="@+id/nav_fav"
+            android:title="Favorites"
+            android:icon="@drawable/ic_baseline_favorite_border_24"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group7">
+        <item
+            android:id="@+id/nav_about"
+            android:title="About Us"
+            android:icon="@drawable/about"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group11">
+        <item
+            android:id="@+id/partners"
+            android:title="Partners"
+            android:icon="@drawable/partners"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group12">
+        <item
+            android:id="@+id/termscond"
+            android:title="Terms Conditions"
+            android:icon="@drawable/termscond"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group13">
+        <item
+            android:id="@+id/priv_policy"
+            android:title="Privacy Policy"
+            android:icon="@drawable/privacypolicy"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group9">
+        <item
+            android:id="@+id/disclaimer"
+            android:title="Disclaimer"
+            android:icon="@drawable/disclaimer"/>
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/group10">
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/logout"/>
+    </group>
+
+</menu>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/activity_dashboard.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/content_dashboard.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_about.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_actions.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_fav.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_home.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_overview.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_symptoms.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_termscond.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/frag_test.xml" value="0.25" />
+        <entry key="..\:/Users/WELCOME/Desktop/TGP/HealthCare/app/src/main/res/layout/place_order_via_cart.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

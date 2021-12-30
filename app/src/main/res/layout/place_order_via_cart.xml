@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Cart.PlaceOrder_ViaCart"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@drawable/ic_baseline_keyboard_backspace_24"
+                    >
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Place Order"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/back">
+                </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/address_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/txt_deliver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Deliver To:">
+        </TextView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:text="Prachi Sisodiya"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/txt_deliver">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_deliver"
+            android:text="Dhampur Bijnor Uttar Pradesh">
+        </TextView>
+
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:text="Change"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/login_bg">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/address_lyt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--<TextView
+                android:id="@+id/coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Coupon Code"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/rec_cart"
+                app:layout_constraintLeft_toLeftOf="parent">
+            </TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/rec_cart"
+                app:layout_constraintLeft_toRightOf="@+id/coupon"
+                app:layout_constraintRight_toRightOf="parent">
+            </View>
+
+
+
+                  <EditText
+                      android:id="@+id/edit_coupoun"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:padding="12dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="10dp"
+                      android:hint="Enter Code Here...."
+                      android:background="@drawable/rounded_edittext_left"
+                      app:layout_constraintTop_toBottomOf="@+id/coupon"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toLeftOf="@+id/btn_coupon">
+                  </EditText>
+
+                    <Button
+                        android:id="@+id/btn_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Apply"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/coupon"
+                        android:background="@drawable/rounded_edittext_right"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/edit_coupoun">
+                    </Button>
+-->
+            <TextView
+                android:id="@+id/price_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Price Details"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/rec_cart"
+                app:layout_constraintLeft_toLeftOf="parent">
+            </TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/rec_cart"
+                app:layout_constraintLeft_toRightOf="@+id/price_details"
+                app:layout_constraintRight_toRightOf="parent">
+            </View>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/price_details"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1100.00"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coupon(Diwali 10-10%)"
+                        android:visibility="gone"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_amount"
+                        app:layout_constraintLeft_toLeftOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/coupon_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-1100.00"
+                        android:visibility="gone"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_amount"
+                        app:layout_constraintRight_toRightOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_total_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_coupon"
+                        app:layout_constraintLeft_toLeftOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/total_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000.00"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_coupon"
+                        app:layout_constraintRight_toRightOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_gst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GST(18% chargeable)"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_total_amt"
+                        app:layout_constraintLeft_toLeftOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/gst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="180"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/total_amt"
+                        app:layout_constraintRight_toRightOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount Paid"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_gst"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1120"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        app:layout_constraintTop_toBottomOf="@+id/gst"
+                        app:layout_constraintRight_toRightOf="parent">
+                    </TextView>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/amount_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/card_details"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"  >
+
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1500"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+                    </TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Proceed to Pay"
+                android:onClick="btn_pay"
+                android:background="@drawable/rounded_edittext"
+                app:layout_constraintTop_toBottomOf="@+id/amount_lyt"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+            </Button>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

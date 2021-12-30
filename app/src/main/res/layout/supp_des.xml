@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Description.Supplement_Description"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@drawable/ic_baseline_keyboard_backspace_24"
+                    ></ImageView>
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Crocin 650"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cart"
+                    app:layout_constraintLeft_toRightOf="@+id/back">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/cart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:background="@drawable/shopping"
+                    ></ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/medicine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/med_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text=""
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/med_relief"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/med_name"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/red"
+        android:text="Amount:"
+        app:layout_constraintTop_toBottomOf="@id/med_relief"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_buynow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Now!!!"
+        android:onClick="buy_now"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/med_name"
+        app:layout_constraintRight_toRightOf="parent">
+    </Button>
+
+    <TextView
+        android:id="@+id/txt_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Description">
+    </TextView>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txt_des"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_similarproducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Similar Products"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="@font/open_sans_semibold"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_similar_prod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_similarproducts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

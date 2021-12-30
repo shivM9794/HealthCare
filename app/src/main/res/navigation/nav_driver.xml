@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_driver.xml"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.healthcare.app.Home.Home_Fragment"
+        android:label="Home"
+        tools:layout="@layout/frag_home"/>
+
+    <fragment
+        android:id="@+id/nav_fav"
+        android:name="com.healthcare.app.Favourite.Fav_Frag"
+        android:label="Fav"
+        tools:layout="@layout/frag_fav"/>
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.healthcare.app.About.About_Frag"
+        android:label="About"
+        tools:layout="@layout/frag_about"/>
+
+    <fragment
+        android:id="@+id/partners"
+        android:name="com.healthcare.app.About.Partners_Frag"
+        android:label="Partners"
+        tools:layout="@layout/frag_partners"/>
+
+    <fragment
+        android:id="@+id/disclaimer"
+        android:name="com.healthcare.app.About.Disclaimer_Frag"
+        android:label="Disclaimer"
+        tools:layout="@layout/frag_disclaimer"/>
+
+    <fragment
+        android:id="@+id/termscond"
+        android:name="com.healthcare.app.About.TermsCondition"
+        android:label="Terms Condition"
+        tools:layout="@layout/frag_termscond"/>
+
+    <fragment
+        android:id="@+id/priv_policy"
+        android:name="com.healthcare.app.About.PrivacyPolicy"
+        android:label="Privacy Policy"
+        tools:layout="@layout/frag_privacy_policy"/>
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.healthcare.app.Cart.Cart_Frag"
+        android:label="Cart"
+        tools:layout="@layout/frag_cart"/>
+
+    <activity
+        android:id="@+id/side_profile"
+        android:name="com.healthcare.app.Profile.ProfileActivity"
+        android:label="Profile"
+        tools:layout="@layout/profile_activity"/>
+
+    <activity
+        android:id="@+id/health_sol"
+        android:name="com.healthcare.app.HealthSolutions.Health_Sol_Activity"
+        android:label="Health Solution"
+        tools:layout="@layout/activity_health_sol"/>
+
+    <activity
+        android:id="@+id/doctors"
+        android:name="com.healthcare.app.Doctors.DoctorsList_Activity"
+        android:label="Doctors"
+        tools:layout="@layout/activity_doc_list"/>
+
+    <activity
+        android:id="@+id/hospitals"
+        android:name="com.healthcare.app.Hospitals.HospitalList_Activity"
+        android:label="Hospitals"
+        tools:layout="@layout/activity_hosp_des"/>
+
+    <activity
+        android:id="@+id/nav_add_cart"
+        android:name="com.healthcare.app.Cart.Add_Cart_Activity"
+        android:label="Cart"
+        tools:layout="@layout/add_cart_activity"/>
+
+    <activity
+        android:id="@+id/order_list"
+        android:name="com.healthcare.app.Cart.OrderList_Activity"
+        android:label="Order List"
+        tools:layout="@layout/activity_order"/>
+
+    <activity
+        android:id="@+id/notification"
+        android:name="com.healthcare.app.Notifiction.Notification_activity"
+        android:label="Notification"
+        tools:layout="@layout/notification_act"/>
+
+
+
+
+    <activity
+        android:id="@+id/logout"
+        android:name="com.healthcare.app.Activity.Logout_Activity"
+        android:label="Logout"
+        tools:layout="@layout/activity_logout"/>
+
+
+</navigation>
